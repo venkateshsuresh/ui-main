@@ -12,11 +12,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "row",
         alignItems: "center"
     },
-    paper: {
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
+
     row: {
         margin: 10
     }

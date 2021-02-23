@@ -11,7 +11,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -204,15 +204,35 @@ export default function Layout(props) {
                 <List>
                     <div>
                         <Link href={"/"}>
-                            <ListItem button selected={selected === 'experiments'} classes={{selected: classes.selected}}>
+                            <ListItem onClick={() => setSelected('experiments')} button selected={selected === 'experiments'} classes={{ selected: classes.selected }}>
                                 <ListItemIcon>
                                     <EmojiObjectsIcon />
                                 </ListItemIcon>
                                 <ListItemText primary="Experiments" />
                             </ListItem>
                         </Link>
+
+                        <Link href={"/targetgroups"}>
+                            <ListItem onClick={() => setSelected('targetgroups')} button selected={selected === 'targetgroups'} classes={{ selected: classes.selected }}>
+                                <ListItemIcon>
+                                    <EmojiObjectsIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="TargetGroup" />
+                            </ListItem>
+                        </Link>
+
+                        <Link href={"/Job"}>
+                            <ListItem onClick={() => setSelected('Job')} button selected={selected === 'Job'} classes={{ selected: classes.selected }}>
+                                <ListItemIcon>
+                                    <EmojiObjectsIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Job" />
+                            </ListItem>
+                        </Link>
+
                     </div>
                 </List>
+
                 <Divider />
             </Drawer>
             <main className={classes.content}>
